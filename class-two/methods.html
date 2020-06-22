@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue Js Methods</title>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body>
+<div id="App">
+	<p>	{{ welcomeMsg() }} </p>
+	<p>	{{ meSelf('Ruhin',24) }} </p>
+
+</div>
+
+</body>
+
+
+<script type="text/javascript">
+
+	var app=new Vue({
+
+		el:'#App',
+
+		data:{
+
+			message:'Bangladesh',
+
+		},
+
+		methods:{
+
+			welcomeMsg(){
+				return 'welcome to Bangladesh';
+			},
+
+			meSelf(name,age){
+				return  `My name is ${name} and i'm ${age} year Young.i live in ${this.message} address is : ${this.myContact()}`;
+			},
+
+			myContact(){
+
+				return "Mob:017XXXXX .  Dhaka-1216"
+			}
+
+			
+
+		}
+
+
+	})
+	
+
+
+</script>
+</html>
