@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event in Vue Js </title>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<style type="text/css">
+	
+	.active{
+
+		color:red;
+		font-weight: bold;
+	}
+
+	.deactive{
+
+		color:blue;
+		text-decoration: underline;
+		font-weight: bold;
+	}
+
+</style>
+</head>
+<body>
+<div id="App">
+	<h2>{{ message }} </h2>
+	 	
+
+	 <button v-on:click="evenNumber()">Show Even Number</button> <br>
+	 <button v-on:click="oddNumber()" >Show odd Number</button> 
+
+	 <p> {{ starEven }}</p>
+	 <p> {{ startOdd }}</p>
+
+
+</div>
+
+</body>
+
+
+<script type="text/javascript">
+
+	var app=new Vue({
+
+		el:'#App',
+
+		data:{
+
+			message:'Event',
+
+			starEven:2,
+
+			startOdd:1,
+		
+
+		},
+
+		methods:{
+
+			evenNumber(){
+
+				return this.starEven +=2;
+			},
+
+
+			oddNumber(){
+
+				return this.startOdd +=2;
+			}
+
+			
+
+		}
+
+
+	})
+	
+
+
+</script>
+</html>
