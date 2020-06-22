@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue Js Methods</title>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<style type="text/css">
+	
+	.active{
+
+		color:red;
+		font-weight: bold;
+	}
+
+	.deactive{
+
+		color:blue;
+		text-decoration: underline;
+		font-weight: bold;
+	}
+
+</style>
+</head>
+<body>
+<div id="App">
+	<h2>{{ message }} </h2>
+	 
+
+	<input type="text" v-model="message">
+
+	<input type="text" v-model="classes">
+	<input type="text" v-model="SiteName">
+	<input type="text" v-model="Siteurl">
+
+
+
+
+	<p>Data Bind</p>
+	<p v-bind:class="classes">Hello Binding Class</p>
+
+	<a :href="Siteurl">{{ SiteName }}</a>
+</div>
+
+</body>
+
+
+<script type="text/javascript">
+
+	var app=new Vue({
+
+		el:'#App',
+
+		data:{
+
+			message:'Bangladesh',
+			classes:'active',
+			SiteName:'facebook',
+			Siteurl:'facebook.com',
+
+		},
+
+		methods:{
+
+			
+
+		}
+
+
+	})
+	
+
+
+</script>
+</html>
